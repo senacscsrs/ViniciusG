@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Minha Princesa ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ff7eb9, #ff758c);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        #contador {
+            font-size: 20px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        /* animação dos corações */
+        .coracao {
+            position: fixed;
+            top: -20px;
+            font-size: 24px;
+            animation: cair linear forwards;
+        }
+
+        @keyframes cair {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="foto.jpg" alt="Nós dois">
+        <h1>Tempo de namoro</h1>
+        <div id="contador"></div>
+        <p>Mari, você é a parte mais linda da minha vida, meu amor e minha princesa, minha maior conquista e a única que eu quero ter pro resto da minha vida. Não importa o que aconteça, seremos nós dois pra sempre. Eu te amo infinitamente meu amor ❤️</p>
+    </div>
+
+    <script>
+        function atualizarContador() {
+    let dataNamoro = new Date(2025, 5, 14); // Junho é 5 (começa no 0)
+    let agora = new Date();
+
+    let anos = agora.getFullYear() - dataNamoro.getFullYear();
+    let meses = agora.getMonth() - dataNamoro.getMonth();
+    let dias = agora.getDate() - dataNamoro.getDate();
+
+    if (dias < 0) {
+        meses--;
+        // pega os dias do mês anterior
+        let ultimoMes = new Date(agora.getFullYear(), agora.getMonth(), 0).getDate();
+        dias += ultimoMes;
+    }
+
+    if (meses < 0) {
+        anos--;
+        meses += 12;
+    }
+
+    let horas = agora.getHours();
+    let minutos = agora.getMinutes();
+    let segundos = agora.getSeconds();
+
+    document.getElementById("contador").textContent =
+        `${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+}
+
+        function criarCoracao() {
+            const coracao = document.createElement("div");
+            coracao.classList.add("coracao");
+            coracao.style.left = Math.random() * 100 + "vw";
+            coracao.style.animationDuration = Math.random() * 2 + 3 + "s";
+            coracao.innerHTML = "💖";
+            document.body.appendChild(coracao);
+
+            setTimeout(() => {
+                coracao.remove();
+            }, 5000);
+        }
+
+        atualizarContador();
+        setInterval(atualizarContador, 1000);
+        setInterval(criarCoracao, 300);
+    </script>
+</body>
+</html>
