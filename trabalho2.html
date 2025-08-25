@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>Trabalho 2</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
   <h1>Trabalho 2</h1>
-  <p> conteúdo do Trabalho 2.</p>
+
+  <script>
+    let nota1 = parseInt(prompt("Digite a primeira nota:"));
+    let nota2 = parseInt(prompt("Digite a segunda nota:"));
+    let media = (nota1 + nota2) / 2;
+    media = Math.floor(media);
+
+    let conceito;
+    switch (true) {
+      case (media >= 9 && media <= 10):
+        conceito = "A";
+        break;
+      case (media >= 7 && media <= 8):
+        conceito = "B";
+        break;
+      case (media >= 5 && media <= 6):
+        conceito = "C";
+        break;
+      case (media >= 3 && media <= 4):
+        conceito = "D";
+        break;
+      case (media >= 0 && media <= 2):
+        conceito = "E";
+        break;
+      default:
+        conceito = "Nota inválida!";
+    }
+    alert("Média: " + media + " - Conceito: " + conceito);
+  </script>
 
   <a href="index.html" class="botao voltar">Voltar</a>
+
 </body>
+
 </html>
