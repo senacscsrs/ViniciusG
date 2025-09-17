@@ -7,7 +7,30 @@
 </head>
 <body>
   <h1>Trabalho 3</h1>
-  <p>conteúdo do Trabalho 3.</p>
+  <h2>Esse é um trabalho em JavaScript que calcula o salario de um funcionario com base nas horas trabalhadas, o valor da hora do funcionario e os descontos do INSS e do imposto de renda</h2>
+  <script>
+    function calcularSalario() {
+  let horas = Number(prompt("Digite a quantidade de horas trabalhadas:"));
+  let valorHora = Number(prompt("Digite o valor da hora:"));
+  let horasExtras = Number(prompt("Digite a quantidade de horas extras:"));
+  let horasNoturnas = Number(prompt("Digite a quantidade de horas noturnas:"));
+
+  let salarioBase = horas * valorHora;
+  let extra = horasExtras * (valorHora * 1.5);
+  let noturno = horasNoturnas * (valorHora * 1.2);
+
+  let bruto = salarioBase + extra + noturno;
+
+  let inss = bruto * 0.08;
+  let impostoRenda = bruto * 0.15;
+
+  let liquido = bruto - inss - impostoRenda;
+
+  alert("Salário Líquido: R$ " + liquido.toFixed(2));
+}
+
+calcularSalario();
+  </script>
 
   <a href="index.html" class="botao voltar">Voltar</a>
 </body>
