@@ -157,29 +157,79 @@ console.log (Qualquernumero + "x" + i + "=" + (Qualquernumero *i));
 }
 
 //21. Use um for para imprimir apenas os números pares de 0 até 20.
+for (let i = 0; i <= 20; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}
 
 //22. Use um for para somar todos os números de 1 a 100 e mostre o resultado no console.
-
+let soma = 0;
+for (let i = 1; i <= 100; i++) {
+  soma += i;
+}
+console.log("Soma de 1 até 100:", soma);
 
 //Exercícios sobre While
 
 //23. Crie uma variável contador iniciando em 0 e use while para imprimir os números até 5.
+let contador = 0;
+while (contador <= 5) {
+  console.log(contador);
+  contador++;
+}
 
 //24. Simule um caixa eletrônico: comece com saldo = 100 e enquanto o saldo for maior que 0, retire 10 e mostre no console.
-
+let saldo = 100 
+while (saldo > 0)  {
+  console.log ("Saldo atual: R$" + saldo.toFixed(2));
+  saldo -= 10
+}
 //25. Use while para mostrar todos os números ímpares entre 1 e 20.
+let i = 1;
+while (i <= 20) {
+  if (i % 2 !== 0) {
+    console.log(i);
+  }
+  i++;
+}
 
 //26. Crie uma variável senha e simule uma tentativa de senha com while, até que a senha correta "abcd" seja digitada.
-
-
+let senhaDigitada = "xyz"; // simulação
+while (senhaDigitada !== "abcd") {
+  console.log("Senha incorreta, tente novamente...");
+  senhaDigitada = "abcd"; // simulação de nova tentativa
+}
+console.log("Acesso permitido!");
 
 
 //Exercícios sobre Do/While
 
 //27. Peça uma senha (simulada com uma variável) e use do/while para repetir até que ela seja "1234".
+let senhaDoWhile;
+do {
+  senhaDoWhile = "1234"; // simulação
+} while (senhaDoWhile !== "1234");
+console.log("Senha correta!");
 
 //28. Use do/while para imprimir números de 0 a 3.
+let num = 0;
+do {
+  console.log(num);
+  num++;
+} while (num <= 3);
 
 //29. Crie um do/while que mostre um menu com três opções (simulado com uma variável) e só saia quando a opção for "sair".
+let opcao;
+do {
+  opcao = "sair"; // simulação
+  console.log("Menu: opção =", opcao);
+} while (opcao !== "sair");
+console.log("Saindo do menu...");
 
 //30. Use do/while para gerar números de 1 até 5 e mostrá-los no console.
+let n = 1;
+do {
+  console.log(n);
+  n++;
+} while (n <= 5);
