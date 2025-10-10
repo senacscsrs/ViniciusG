@@ -1,49 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trabalho 2</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
-  <h1>Trabalho de Media</h1>
-  <h2>Esse é um trabalho em JavaScript que calcula a media das notas de um estudante com base nos valores recebidos</h2>
+  <header>
+    <h1>Vinicius</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre Mim</a>
+      <a href="trabalhos.html">Trabalhos</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
 
-  <script>
-    let nota1 = parseInt(prompt("Digite a primeira nota:"));
-    let nota2 = parseInt(prompt("Digite a segunda nota:"));
-    let media = (nota1 + nota2) / 2;
-    media = Math.floor(media);
+  <main>
+    <section>
+      <h2>Trabalho de Média</h2>
+      <p>Este trabalho calcula a média das notas de um estudante e mostra o conceito correspondente.</p>
 
-    let conceito;
-    switch (true) {
-      case (media >= 9 && media <= 10):
-        conceito = "A";
-        break;
-      case (media >= 7 && media <= 8):
-        conceito = "B";
-        break;
-      case (media >= 5 && media <= 6):
-        conceito = "C";
-        break;
-      case (media >= 3 && media <= 4):
-        conceito = "D";
-        break;
-      case (media >= 0 && media <= 2):
-        conceito = "E";
-        break;
-      default:
-        conceito = "Nota inválida!";
-    }
-    alert("Média: " + media + " - Conceito: " + conceito);
-  </script>
+      <script>
+        let nota1 = parseInt(prompt("Digite a primeira nota:"));
+        let nota2 = parseInt(prompt("Digite a segunda nota:"));
+        let media = (nota1 + nota2) / 2;
+        media = Math.floor(media);
 
-  <a href="index.html" class="botao voltar">Voltar</a>
+        let conceito;
+        switch (true) {
+          case (media >= 9): conceito = "A"; break;
+          case (media >= 7): conceito = "B"; break;
+          case (media >= 5): conceito = "C"; break;
+          case (media >= 3): conceito = "D"; break;
+          case (media >= 0): conceito = "E"; break;
+          default: conceito = "Nota inválida!";
+        }
 
+        alert("Média: " + media + " - Conceito: " + conceito);
+      </script>
+
+      <a href="trabalhos.html" class="btn">Voltar</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Vinicius | Todos os direitos reservados.</p>
+  </footer>
 </body>
-
-
 </html>

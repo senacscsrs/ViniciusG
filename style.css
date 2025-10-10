@@ -1,49 +1,117 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-  text-align: center;
-  padding: 40px;
+/* ======= RESET ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #0d0d0f, #1a1a1d);
+  color: #f0f0f0;
+  text-align: center;
+  padding-top: 100px; /* evita corte por causa da barra fixa */
+}
+
+/* ======= CABEÇALHO ======= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(20, 20, 25, 0.95);
+  border-bottom: 2px solid #6a0dad;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+header h1 {
+  color: #a45eff;
+  font-size: 1.8em;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #a45eff;
+  text-shadow: 0 0 8px #a45eff;
+}
+
+/* ======= CONTEÚDO ======= */
+main {
+  padding: 40px 20px;
+}
+
+section h2 {
+  color: #a45eff;
+  font-size: 2em;
   margin-bottom: 20px;
 }
 
-p {
-  margin-bottom: 30px;
+section p {
+  color: #d1d1d1;
   font-size: 1.1em;
+  max-width: 700px;
+  margin: 0 auto 25px auto;
+  line-height: 1.6;
 }
 
 .botoes {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 15px;
-  align-items: center;
-  margin-top: 30px;
+  justify-content: center;
 }
 
-.botao {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 24px;
+/* ======= BOTÕES ======= */
+.btn {
+  background-color: #6a0dad;
+  color: #fff;
+  padding: 12px 30px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-  margin-top: 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.botao:hover {
-  background-color: #45a049;
+.btn:hover {
+  background-color: #8e3aff;
+  box-shadow: 0 0 10px #8e3aff;
+  transform: scale(1.05);
 }
 
-.voltar {
-  background-color: #4CAF50;
+/* ======= IMAGENS ======= */
+.img1 {
+  width: 300px;
+  margin: 10px;
 }
 
-.voltar:hover {
-  background-color: #45a049;
+.img2 {
+  width: 50%;
+  margin: 10px;
+}
+
+.img3 {
+  width: 30vw;
+  margin: 10px;
+}
+
+/* ======= RODAPÉ ======= */
+footer {
+  background-color: #0d0d0f;
+  color: #bbb;
+  padding: 30px 20px;
+  margin-top: 50px;
 }
