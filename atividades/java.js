@@ -16,7 +16,7 @@ console.log (pessoa.nome, pessoa.idade, pessoa.cidade);
 // Mostre o resultado final no console.
 
 pessoa.cidade = "Santa Cruz do Sul RS"
-pessoa.profissao = "engenheiro"
+pessoa.profissao = "Especialista em Cybersegurança"
 console.log(pessoa.nome, pessoa.idade, pessoa.cidade, pessoa.profissao);
 
 // 3. Objeto com função
