@@ -35,3 +35,23 @@ let carro ={
     }
 }
 carro.ligar();
+
+// 4. Usando if dentro de um método
+// Crie um objeto usuario com as propriedades nome e idade.
+// Adicione um método chamado verificarIdade() que:
+// Mostre “Maior de idade” se a idade for 18 ou mais.
+// Mostre “Menor de idade” caso contrário.
+
+let usuario ={
+    nome: "cliente",
+    idade: 22,
+
+    VerificarIdade:function () {
+        if (this.idade >= 18) {
+            console.log("Maior de idade");
+        } else {
+            console.log("Menor de idade")
+        }
+    }
+}
+usuario.VerificarIdade( );
